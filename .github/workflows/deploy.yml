@@ -26,6 +26,7 @@ jobs:
       - name: Checkout your repository using git
         uses: actions/checkout@v2
       - name: Install, build, and upload your site output
+        run: npm install astro
         uses: withastro/action@v0
         with:
             path: . # The root location of your Astro project inside the repository. (optional)
