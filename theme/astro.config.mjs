@@ -8,6 +8,7 @@ import lit from "@astrojs/lit";
 export default defineConfig({
   site: 'https://biozi.co.uk',
   // Your public domain, e.g.: https://my-site.dev/. Used to generate sitemaps and canonical URLs.
+  base: "theme/", // I added this myself
   sitemap: true,
   // Generate sitemap (set to "false" to disable)
   integrations: [sitemap(), mdx(), image(), lit()], // Add renderers to the config
