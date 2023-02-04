@@ -13,3 +13,7 @@ Epigenome
 					<li>Transcription factor binding  </li>
 					
 				</ul>
+
+
+
+# In the pricing tab, include backlinking from short-term to collaborative and vice verse.

@@ -46,10 +46,13 @@ export const footerLists = [
 				title: 'About',
 				slug: '/company/about',
 			},
-			{
-				title: 'Domains',
-				slug: '/company/team',
-			},
+
+            // Use the below to add the Team page
+			// {
+			//	title: 'Domains',
+			//	slug: '/company/team',
+			// },
+
 			{
 				title: 'Contact',
 				slug: '/company/contact',
@@ -68,21 +71,13 @@ export const footerLists = [
 		items: [
 			{
 				title: 'Training',
-				slug: '/theme/get-started',
+				slug: '/theme/training',
 				// Here add Programming personalised R, python and C++
 			},
-			{
-				title: 'Workshops',
-				slug: '/theme/style-guide',
-				// Here add periodicals
-			},
-            {
-                title: 'Technical Notes',
-                slug: '/theme/theme-setup',
-            },
+
             {
                 title: 'Publications',
-                slug: '/theme/customizing-odyssey',
+                slug: '/theme/publication',
             }
 		],
 	},
