@@ -26,7 +26,8 @@ jobs:
       - name: Checkout your repository using git
         uses: actions/checkout@v2
       - name: Get astro
-        run: npm install astro
+        run: npm install astro # This fixed the issue of astro not found.
+        
       - name: Install, build, and upload your site output
         uses: withastro/action@v0
         with:
