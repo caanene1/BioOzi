@@ -1,17 +1,17 @@
 export const footerSocials = [
   {
     name: 'Twitter',
-    url: 'https://twitter.com/littlesticksdev', // Edit with the biozi twiter
+    url: 'https://twitter.com/BiOzionline',
     icon: "mdi:twitter",
   },
   {
     name: 'Youtube',
-    url: 'https://youtube.com/c/LittleSticks',
+    url: 'https://www.youtube.com/channel/UCQbucp2r9Rd7SuK5GebHkKA',
     icon: "mdi:youtube",
   },
   {
     name: 'Github',
-    url: 'https://github.com/littlesticks',
+    url: 'https://github.com/biozionline',
     icon: "mdi:github",
   },
 ]

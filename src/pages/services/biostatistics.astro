@@ -1,91 +1,57 @@
 ---
-import Layout from '../../layouts/Base.astro';
-import LandingContactForm from '../../components/forms/LandingContactForm.astro';
-import Logo from '../../components/Logo.astro';
+import {Icon} from 'astro-icon'
+import {
+  AnnouncementBar,
+	Button,
+  StickyTextImageSection,
+  CtaCardSection
+} from '@littlesticks/odyssey-theme-components';
+import Layout from '../../layouts/Page.astro';
+import TextAndImageHero from '../../components/sections/heros/TextAndImageHero.astro';
 
 const seo = {
-	title: 'Landing Page #2 | Astro Odyssey Theme',
-	description: 'Landing Page #2 | Astro Odyssey Theme',
+	title: 'Biostatistics | Our Biostatistics services',
+	description: 'Biostatistics | Our Biostatistics services',
 };
 ---
 
-<Layout seo={seo}>
-  <div class="full-page-split__wrapper">
-    <section class="full-page-split__image-section">
-      <div class="full-page-split__logo">
-        <a href="/">
-          <Logo />
-        </a>
-      </div>
-      <picture>
-        <img
-          src="/assets/images/home/classic-hero.jpg"
-          alt="Astro Odyssey"
-          class="full-page-split__image"
-        />
-      </picture>
-    </section>
-    <section class="full-page-split__content-section">
-      <div class="full-page-split__content-container">  
-        <h1>Contact Us For a Free Consultation</h1>
-        <p>Fill out the form below to schedule a free consultation on your business' website needs.</p>
-        <LandingContactForm/>
-      </div>
-    </section>
-  </div>
+<AnnouncementBar text="Read Our Latest Biostatistics Blog Post" href="/blog/posts/consider-hybrid-work/" slot="announcement-bar"/>
+<Layout seo={seo} >
+	<TextAndImageHero reversed>
+		<div slot="text-container">
+			<h1>Quality support in design and analysis.</h1>
+
+		</div>
+		<div slot="btns-container">
+			<Button href="/company/contact" customIcon
+				>Request a Consultation<Fragment slot="icon">
+          <Icon name="ic:baseline-chevron-right"/>
+        </Fragment></Button
+			>
+		</div>
+		<picture slot="image-container">
+			<img
+				src="/assets/images/services/biostatistics.jpg"
+				alt="Biostatistics"
+				id="home-hero-image2"
+			/>
+		</picture>
+
+	</TextAndImageHero>
+
+  <StickyTextImageSection>
+    <div slot="text-container">
+      We offer a range of biostatistical and data science capabilities. Our experts work with
+       you at every stage of the research process to design studies, conduct analyses and interpret results. 
+      
+       <p><h4>Example studies include :</h4></p>
+        <ul style="list-style-type:none">
+        <li>Clinical trial design and analysis</li>
+        <li>Observational study design and analysis</li>
+        <li>Laboratory experimental design and analysis</li>
+        <li>Modelling and simulation studies</li>
+        </ul>
+    </div>
+
+  </StickyTextImageSection>
 </Layout>
-
-<style>
-.full-page-split__wrapper {
-  display: grid;
-  grid-template-columns: 6fr 4fr;
-  grid-auto-columns: 1fr;
-  min-height: 100vh;
-}
-.full-page-split__image-section {
-  position: relative;
-}
-.full-page-split__image-section :global(img) {
- width: 100%;
-  height: 100vh;
-  object-fit: cover;
-}
-.full-page-split__logo {
-  background-color: var(--theme-surface-1);
-  color: (--theme-on-surface-1);
-  padding: 0.5rem 1rem;
-  border-radius: var(--theme-shape-radius);
-  top: 1rem;
-  left: 1rem;
-  position: absolute;
-  z-index: 1;
-}
-.full-page-split__logo a {
-  text-decoration: none;
-}
-.full-page-split__content-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.full-page-split__content-container {
-  margin: 1rem;
-  padding: 2rem;
-  background-color: var(--theme-surface-1);
-  color: var(--theme-on-surface-1);
-  border-radius: var(--theme-shape-radius);
-}
-.full-page-split__content-container h1 {
-  font-size: var(--font-size-xl);
-}
-@media(max-width: 768px) {
-  .full-page-split__wrapper {
-    grid-template-columns: 1fr;
-    grid-template-rows: 30vh auto;
-  }
-  .full-page-split__image-section :global(img) {
-    max-height: 30vh;
-  }
-}
-</style>
-

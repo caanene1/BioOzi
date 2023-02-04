@@ -2,17 +2,20 @@
 import { Button, FormInput, FormSelect, FormTextarea } from '@littlesticks/odyssey-theme-components';
 
 const selectOptions = [
-  "Google Search",
-  "Social Media",
-  "Email",
+  "Bioinformatics",
+  "Biostatistics",
+  "Machine learning",
+  "Software creation",
+  "Training and Workshops",
+  "Careers",
+  "Other",
 ]
-
 ---
 
-<form name="Contact Form" method="POST" action="/contact-thank-you">
-  <FormInput type="text" label="Name" name="Name" placeholder="John Doe" />
+<form name="Contact Form" method="POST" action="https://formspree.io/f/xnqyjkzl">
+  <FormInput type="text" label="Name" name="Name" placeholder="Dr John" />
   <FormInput type="email" label="Email" name="Email" placeholder="hello@example.com" />
-  <FormSelect label="How Did You Hear About Us?" options={selectOptions} />
+  <FormSelect label="Which of these services best cover your query?" options={selectOptions} />
   <FormTextarea label="Message" name="Message" placeholder="Your message here..." />
   <Button>Submit</Button>
 </form>
