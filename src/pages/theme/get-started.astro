@@ -1,6 +1,7 @@
 ---
 import {Icon} from 'astro-icon';
-import { Button, Container, TextCardSection } from '@littlesticks/odyssey-theme-components';
+import { Button, Container, CtaCardSection,
+  AnnouncementBar, TextCardSection } from '@littlesticks/odyssey-theme-components';
 import Layout from '../../layouts/Page.astro';
 
 const seo = {
@@ -8,6 +9,8 @@ const seo = {
 	description: 'Get started on how to setup and use this Astro theme.',
 };
 ---
+
+<AnnouncementBar text="Promotion: Free analysis of publicly available datasets (x1)." href="/company/contact" slot="announcement-bar"/>
 
 <Layout {seo}>
 	<Container>
@@ -50,6 +53,14 @@ const seo = {
 			</div>
 		</TextCardSection>
 	</Container>
+
+  <CtaCardSection background="var(--theme-surface-2)" color="var(--theme-on-surface-2)">
+    <h2>Start Your Discovery Journey Today</h2>
+    <Button href="/services/step" customIcon>Our Process<Fragment slot="icon">
+      <Icon name="ic:baseline-chevron-right"/>
+    </Fragment></Button>
+  </CtaCardSection>
+
 </Layout>
 
 <style>
