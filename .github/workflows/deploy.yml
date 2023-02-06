@@ -27,7 +27,8 @@ jobs:
         uses: actions/checkout@v2
       - name: Get astro
         run: npm install astro # This fixed the issue of astro not found.
-        
+      - name: Get partytown # This fixed the issue of partytown not found
+        run: npm install -D @astrojs/partytown
       - name: Install, build, and upload your site output
         uses: withastro/action@v0
         with:
