@@ -12,8 +12,22 @@ const { seo } = Astro.props;
 
 <html lang="en">
 	<head>
+		<script
+		type="text/partytown"
+		src="https://www.googletagmanager.com/gtag/js?id=G-5G16YXSJ2Z">
+		  </script>
+		  <script type="text/partytown">
+		window.dataLayer = window.dataLayer || [];
+		function gtag() {
+		  dataLayer.push(arguments);
+		}
+		gtag("js", new Date());
+		gtag("config", "G-5G16YXSJ2Z");
+		</script>
 		<BaseHead {...seo} />
 	</head>
+
+
 	<body>
 		<SkipLink />
     <slot name="announcement-bar" />
